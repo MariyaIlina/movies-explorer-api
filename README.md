@@ -4,8 +4,8 @@
 
 ## Ссылки на проект
 
-IP <158.160.55.164>
+IP <51.250.73.67>
 
-Frontend 
+Frontend http://praktikum.movies.nomoredomains.rocks
 
-Backend 
+Backend http://api.praktikum.movies.nomoredomains.rocks
