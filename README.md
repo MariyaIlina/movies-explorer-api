@@ -6,6 +6,6 @@
 
 IP <51.250.73.67>
 
-Frontend http://praktikum.movies.nomoredomains.rocks
+Frontend https://praktikum.movies.nomoredomains.rocks
 
-Backend http://api.praktikum.movies.nomoredomains.rocks
+Backend https://api.praktikum.movies.nomoredomains.rocks
