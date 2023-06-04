@@ -15,7 +15,11 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 app.use(cors({
   origin: ['http://localhost:3000',
     'http://localhost:3000',
-    'http://localhost:3002'],
+    'http://localhost:3002',
+    'http://api.praktikum.movies.nomoredomains.rocks',
+    'http://praktikum.movies.nomoredomains.rocks',
+    'https://api.praktikum.movies.nomoredomains.rocks',
+    'https://praktikum.movies.nomoredomains.rocks'],
   credentials: true,
 }));
 
