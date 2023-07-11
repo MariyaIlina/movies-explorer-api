@@ -66,11 +66,11 @@ const login = (req, res, next) => {
 
 const updateUser = (req, res, next) => {
   const { _id } = req.user;
-  const { name, about } = req.body;
+  const { name, email } = req.body;
 
   const options = { new: true, omitUndefined: true, runValidators: true };
 
-  User.findByIdAndUpdate(_id, { name, about }, options)
+  User.findByIdAndUpdate(_id, { name, email }, options)
     .orFail(() => {
       throw new NotFoundError('Пользователь не найден');
     })

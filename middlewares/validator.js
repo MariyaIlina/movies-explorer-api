@@ -37,7 +37,17 @@ exports.patchUserMeValidation = celebrate({
       .messages({
         'string.min': 'Минимальная длина поля "name" - 2',
         'string.max': 'Максимальная длина поля "name" - 30',
-        'any.required': 'Поле "password" должно быть заполнено',
+      }),
+    email: Joi.string()
+      .required()
+      .custom((value, helpers) => {
+        if (validator.isEmail(value)) {
+          return value;
+        }
+        return helpers.message('Невалидный email');
+      })
+      .messages({
+        'any.required': 'Поле "email" должно быть заполнено',
       }),
   }),
 });
