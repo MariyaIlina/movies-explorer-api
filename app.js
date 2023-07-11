@@ -8,14 +8,14 @@ const { errors } = require('celebrate');
 const { routes } = require('./routes/index');
 const { limiter } = require('./middlewares/limiter');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3001 } = process.env;
 const app = express();
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 app.use(cors({
   origin: ['http://localhost:3000',
-    'http://localhost:3000',
     'http://localhost:3002',
+    'http://localhost:3001',
     'http://api.praktikum.movies.nomoredomains.rocks',
     'http://praktikum.movies.nomoredomains.rocks',
     'https://api.praktikum.movies.nomoredomains.rocks',
@@ -53,4 +53,6 @@ app.use((err, req, res, next) => {
     });
   next();
 });
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log('Сервер запущен на порту 3000');
+});
